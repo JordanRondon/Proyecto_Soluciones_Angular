@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <div class="titulo2">
+        <div class="probando">
+            <label for="btn-menu2">Menú</label> 
+            
+        </div>
+    </div>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            
+            <div class="item" data-name="p-16" *ngFor="let item of listProducto">
+                <span class="titulo-item">{{item.nombre}}</span>
+                <img img [src]="uint8ArrayToImageUrl(item.imagen)" class="img-item" alt="" *ngIf="item.imagen">
+                <span class="precio-item">S/ {{item.precio_unitario}}</span>
+            </div>
+        </div>
+    </section>
+    <div class="productos-descripcion" >
+        <div class="descripcion" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/COMBO1.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Combo 1</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/70</span>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(250)</span>
+            </div>
+            <p>-x1 pollo a la brasa entero</p>
+            <p>-x1 Porción de papas familiares</p>
+            <p>-x1 ensalada familiar</p>
+            <p>-x1 ensalada de palta</p>
+            <p>-x2 platos de chaufa</p>
+            <p>-x1 Inka kola de 3 L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/COMBO2.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Combo 2</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/40</span>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(250)</span>
+            </div>
+            <p>-x2 1/4 pollo a la brasa</p>
+            <p>-x1 Coca cola de 1L</p>
+            <p>-x1 Coca cola de 500ml</p>
+            <p>-x1 1/2 Porción familiar de papas</p>
+            <p>-x2 ensalada</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/COMBO3.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Combo 3</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/150</span>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(250)</span>
+            </div>
+            <p>x2 Pollo a la brasa entero</p>
+            <p>x2 Porciones de papas familiares</p>
+            <p>x1 Ensalada familiar</p>
+            <p>x1 Ensalada de Palta</p>
+            <p>x1 Jarra de chicha 1 L</p>
+            <p>x1 Gaseosa Coca cola 2L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/unpollo.png" alt="" class="img-item">
+            <h2 class="titulo-item"> 1 pollo a la brasa</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/60</span>
+            <p>x1 Pollo a la brasa</p>
+            <p>x1 Porción de papas familiares</p>
+            <p>x1 Ensalda familiar</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-5">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/mediopollo.png" alt="" class="img-item">
+            <h2 class="titulo-item"> 1/2 Pollo a la brasa</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/34</span>
+            <p>x1 1/2 Pollo a la brasa</p>
+            <p>x1 1/2 Porción de papas familiares</p>
+            <p>x1 1/2 Ensalda familiar</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-6">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/cuarto.png" alt="" class="img-item">
+            <h2 class="titulo-item"> 1/4 pollo a la brasa</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/23</span>
+            <p>x1 1/4 Pollo a la brasa</p>
+            <p>x1 Porción de papas regular</p>
+            <p>x1 Ensalda tamaño regular</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-7">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/octavopollo.png" alt="" class="img-item">
+            <h2 class="titulo-item"> 1/8 pollo a la brasa</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/14</span>
+            <p>x1 1/8 Pollo a la brasa</p>
+            <p>x1 Porción de papas</p>
+            <p>x1 Ensalda</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-8">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/ensaladapalta.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Ensalada de Palta</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/8</span>
+            <p>x1 Plato de ensalada familiar</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-9">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/porcionpapas.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Porción de papas familiar</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/7</span>
+            <p>x1 Porción grande de papa familiar</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-10">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/cocacola3l.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Coca cola 3L</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/11</span>
+            <p>x1 Gaseosa Coca cola 2.5L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-11">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/cocacola1l.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Coca cola 1L</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/6</span>
+            <p>x1 Gaseosa Coca cola 1L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-12">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/cocacola500ml.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Coca cola 500ml</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/3</span>
+            <p>x1 Gaseosa Coca cola 500ml</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-13">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/inkakola3L.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Inka kola 3L</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/12</span>
+            <p>x1 Gaseosa Inka kola 3L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-14">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/inkakola1l.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Inka kola 1L</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/6</span>
+            <p>x1 Gaseosa Inka kola 1L</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        <div class="descripcion" data-target="p-15">
+            <i class="fas fa-times"></i>
+            <img src ="img/menu/inkakola500ml.png" alt="" class="img-item">
+            <h2 class="titulo-item"> Inka kola 500 ml</h2>
+            <h3>Descripcion</h3>
+            <span class="precio-item">S/3</span>
+            <p>x1 Gaseosa Inka kola 500 ml</p>
+            <!--<button class="boton-item">Agregar al Carrito</button>-->
+        </div>
+        
+    </div>
+</body>
+</html>

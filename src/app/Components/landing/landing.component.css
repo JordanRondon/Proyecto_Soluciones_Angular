@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    font-size: 20px;
+}
+
+html, body {
+    height:100%;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle, #cded57, #abdb5b, #8cc85e, #71b460, #5aa05f, #4e915a, #438355, #3a744f, #346846, #2e5b3e, #285036, #22442e);
+}
+
+/*--------------------------------navbar-Horizontal----------------------------*/
+
+.contenedor-cabecera {
+    background-color: #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.contenedor-cabecera .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-cabecera .logo h1 {
+    color: #FCCA46;
+}
+
+.contenedor-cabecera .logo{
+    cursor: pointer;
+}
+
+.contenedor-cabecera .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.contenedor-cabecera .logo img:hover {
+    transform: scale(1.2);
+}
+
+.contenedor-cabecera .nav-links {
+    list-style: none;
+}
+
+.contenedor-cabecera .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.contenedor-cabecera .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.contenedor-cabecera .nav-links a {
+    font-size: 700;
+    color: #F7F5FB;
+    text-decoration: none;
+}
+
+.contenedor-cabecera .nav-links li a:hover {
+    color: #FCCA46;
+}
+
+.contenedor-cabecera .btn button {
+    font-weight: 700;
+    color: #292929;
+    padding: 9px 25px;
+    background: #FFB84C;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.contenedor-cabecera .btn button:hover {
+    background-color: #FCCA46;
+    color: #292929;
+    transform: scale(1.1);
+}
+/*--------------------------------navbar-vertical----------------------------*/
+aside {
+    display: none;
+}
+
+@media screen and (max-width: 918px) {
+    .contenedor-cabecera .nav-links {
+        display: none;
+    }
+
+    .contenedor-cabecera .btn {
+        display: none;
+    }
+
+    .barra-menu-links {
+        display: block;
+    }
+
+    .logo {
+        margin-right: 15rem;
+    }
+
+    aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .icon-menu .menu-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 35px; 
+        margin-right: 1.5rem;
+        margin-top: 1rem;
+        color: #F7F5FB;
+        cursor: pointer;
+    }
+
+    #barra-menu {
+        background: #292929;
+        height: 100vh;
+        width: 0px;
+        transition: 0.3s all;
+    }
+
+    #barra-menu ul {
+        /*align-items: center;*/
+        text-align: center;
+        /*padding: 5rem;*/
+        padding: 3rem;
+        /*line-height: 5rem;*/
+        line-height: 3rem;
+        list-style: none;
+    }
+
+    #barra-menu ul li a {
+        color: #F7F5FB;
+        text-decoration: none;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #barra-menu ul li a:hover {
+        padding: 8px;
+        border-radius: 15px;
+        background: #FCCA46;
+        color: #292929;
+    }
+
+    #barra-menu .contenedor-boton{
+        width: 100%;
+        display: block;
+        padding-left: 5rem;
+    }
+
+    #barra-menu .btn button {
+        font-weight: 700;
+        color: #292929;
+        padding: 9px 25px;
+        background: #FFB84C;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    #barra-menu .btn button:hover {
+        background-color: #FCCA46;
+        color: #292929;
+        transform: scale(1.1);
+    }
+}
+/*-----------------------------------------------------------------------------*/
+/*----------------------------------contenido----------------------------------*/
+.contenedor-contenido {
+    display: flex;
+    max-width: 100%;
+    margin-top: 9.3rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imagen-prducto img {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    rotate: 4.5deg;
+}
+
+.imagen-prducto img:hover{
+    transform: scale(1.1);
+}
+
+.contenido {
+    max-width: 100%;
+}
+
+.contenido .titulo h1 {
+    font-size: 50px;
+    color: #F7F5FB;
+}
+
+.contenido p {
+    color: #F7F5FB;
+    line-height: 2rem;
+}
+
+.boton-catalogo-producto button {
+    font-weight: 700;
+    color: #292929;
+    padding: 0.9rem 1.3rem;
+    margin-top: 2rem;
+    background: #FFB84C;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.boton-catalogo-producto button:hover {
+    background-color: #FCCA46;
+    color: #292929;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 580px) {
+    .contenido .titulo h1 {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+
+    .contenido p {
+        font-size: 0.7rem;
+        margin-left: 1.5rem;
+        width: 450px;
+    }
+
+    .boton-catalogo-producto button {
+        margin-left: 1.5rem;
+    }
+
+    .imagen-prducto img {
+        max-width: 100%;
+        width: 400px;
+        margin-top: 0.5rem;
+        height: auto;
+    }
+}

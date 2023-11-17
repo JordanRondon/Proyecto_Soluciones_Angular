@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <div class="contenedor">
+        <div class="login">
+            <form>
+                <h1>Login</h1>
+                <hr>
+                <p>Bienvenido a Wilson!</p>
+                <div class="contenedor-item">
+                    <input type="input" class="caja-texto" placeholder="Correo" required="">
+                    <label for="name" class="label">Correo</label>
+                </div>
+                <div class="contenedor-item">
+                    <input type="password" class="caja-texto" placeholder="Contraseña" required="">
+                    <label for="name" class="label">Contraseña</label>
+                </div>
+                <button (click)="abrirArchivo()">Ingresar</button>
+                
+                <p class="texto-recuperar-contrasenia">
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                </p>
+            </form>
+        </div>
+        <div class="imagen">
+            <img src="/assets/images/login/pollo-Logo-Login.png">
+        </div>
+    </div>
+
+</body>
+</html>

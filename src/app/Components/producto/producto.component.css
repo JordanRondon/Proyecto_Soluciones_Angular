@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Open Sans',sans-serif;
+}
+html,body{
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: rgb(228, 228, 228);
+}
+h2{
+    font-weight: 700;
+}
+label{
+    font-weight: 600;
+}
+.contenedor-cabecera {
+    width: 100%;
+    background-color: #292929;
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+    padding: 10px;
+}
+
+.contenedor-cabecera .logo {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-cabecera .logo h2 {
+    color: #FCCA46;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+}
+
+.contenedor-cabecera .logo{
+    cursor: pointer;
+}
+
+.contenedor-cabecera .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contenedor-cabecera .logo img:hover {
+    transform: scale(1.2);
+}
+
+.modal-body{
+    display: flex;
+    justify-content: space-between;
+}
+section{
+    margin-right: calc(4% - 10px);
+}
+table thead th{
+    border-bottom-color: black;
+}
+table th{
+    font-weight: 700;
+}
+table td, table th{
+    border-top-color: black;
+}
+.tabla{
+    min-width: 60%;
+    max-width: 70%;
+    margin-right: calc(4% - 60px);
+}
+.formulario{
+    min-width: 22%;
+    margin-top: 4%;
+    margin-left: calc(4% - 40px);
+}
+
+button {
+    margin-top: 10px;
+    min-width: 100px;
+    border: none;
+    background-color: rgb(236, 174, 39);
+    color: white;
+}
+button:hover{
+    background-color: rgb(236, 144, 39);
+    transform: scale(1.1);
+}
+
+@media (max-width: 1450px){
+    .modal-body{
+        flex-direction: column;
+        align-items: center;
+    }
+}

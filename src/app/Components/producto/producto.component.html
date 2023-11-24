@@ -11,68 +11,75 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <header class="contenedor-cabecera">
+    <div class="logo">
+        <img src="/assets/images/Logo_Wilson.png" alt="Logo de la Empreza">
+        <h2>Polleria Wilson</h2>
+    </div>
+  </header>
+
   <div class="modal-body">
-    <h2>Formulario CRUD - Registro de Productos</h2>
-    <form id="formProducto" [formGroup]="formProducto">
-      
-      <div class="form-group">
-        <label for="id">id_producto:</label>
-        <input type="text" class="form-control" id="id_producto" name="id_producto" formControlName="id_producto" required>
-      </div>
-      <div class="form-group">
-        <label for="nombres">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" formControlName="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="descripcion">Descripcion:</label>
-        <input type="text" class="form-control" id="descripcion" name="descripcion"formControlName="descripcion" required>
-      </div>
-      <div class="form-group">
-        <label for="precio">Precio:</label>
-        <input type="text" class="form-control" id="precio_unitario" name="precio_unitario" formControlName="precio_unitario"required>
-      </div>
-      <div class="form-group">
-        <label for="id_producto_categoria">ID Categoria:</label>
-        <input type="text" class="form-control" id="id_producto_categoria" name="id_producto_categoria" formControlName="id_producto_categoria" required>
-      </div>
-      <div class="form-group">
-        <label for="imagen">Ingrese una imagen</label>
-        <input type="file" class="form-control" id="imagen" name="imagen" formControlName="imagen" required>
-      </div>
-      <button type="submit" class="btn btn-primary" id="submitButton" (click)="save()">Guardar</button>
-      
-      
-    </form>
-    <hr>
-    <h2>Tabla de Productos</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID Producto</th>
-          <th>Nombre</th>
-          <th>Descripcion</th>
-          <th>Precio Unitario</th>
-          <th>ID Categoria</th>
-          <th>Imagen</th>
-          <th style="display: none;">Imagen</th>
-          <th >Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="employeeTable">
-        <tr *ngFor="let item of listProducto">
-          <th>{{item.id_producto}}</th>
-          <th>{{item.nombre}}</th>
-          <th>{{item.descripcion}}</th>
-          <th>{{item.precio_unitario}}</th>
-          <th>{{item.id_producto_categoria}}</th>
-          <th><img img [src]="uint8ArrayToImageUrl(item.imagen)"  alt="Mi imagen" *ngIf="item.imagen" style="max-width:600px ;max-height: 200px;"></th>
-          <th style="display: none;">{{item.imagen}}</th>
-          <th><button type="delete" class="btn btn-primary" id="deleteButton" (click)="delete2(item.id_producto)">Borrar</button>
-            <button type="update" class="btn btn-primary" id="updateButton" (click)="selectItem(item)">seleccionar</button>
-            <button type="update" class="btn btn-primary" id="updateButton" (click)="update()">Actualizar</button></th>
-        </tr>
-      </tbody>
-    </table>
+    <section class="formulario">
+      <h2>Registro de Productos</h2>
+      <form id="formProducto" [formGroup]="formProducto">
+        <div class="form-group">
+          <label for="id">Producto ID:</label>
+          <input type="text" class="form-control" id="id_producto" name="id_producto" formControlName="id_producto" required >
+        </div>
+        <div class="form-group">
+          <label for="nombres">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" formControlName="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripcion:</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion"formControlName="descripcion" required>
+        </div>
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input type="text" class="form-control" id="precio_unitario" name="precio_unitario" formControlName="precio_unitario"required>
+        </div>
+        <div class="form-group">
+          <label for="id_producto_categoria">Categoria ID:</label>
+          <input type="text" class="form-control" id="id_producto_categoria" name="id_producto_categoria" formControlName="id_producto_categoria" required>
+        </div>
+        <div class="form-group">
+          <label for="imagen">Ingrese una imagen</label>
+          <input type="file" class="form-control" id="imagen" name="imagen" formControlName="imagen" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton" (click)="save()">Guardar</button>  
+      </form>
+    </section>
+    <section class="tabla">
+      <h2>Tabla de Productos</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID Producto</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio Unitario</th>
+            <th>ID Categoria</th>
+            <th>Imagen</th>
+            <th style="display: none;">Imagen</th>
+            <th >Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTable">
+          <tr *ngFor="let item of listProducto">
+            <th>{{item.id_producto}}</th>
+            <th>{{item.nombre}}</th>
+            <th>{{item.descripcion}}</th>
+            <th>{{item.precio_unitario}}</th>
+            <th>{{item.id_producto_categoria}}</th>
+            <th><img img [src]="uint8ArrayToImageUrl(item.imagen)"  alt="Mi imagen" *ngIf="item.imagen" style="max-width:600px ;max-height: 200px;"></th>
+            <th style="display: none;">{{item.imagen}}</th>
+            <th><button type="delete" class="btn btn-primary" id="deleteButton" (click)="delete2(item.id_producto)">Borrar</button>
+              <button type="update" class="btn btn-primary" id="updateButton" (click)="selectItem(item)">Modificar</button>
+              <button type="update" class="btn btn-primary" id="updateButton" (click)="update()">Actualizar</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

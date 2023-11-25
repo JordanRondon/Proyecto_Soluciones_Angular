@@ -6,7 +6,7 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { ProductoComponent } from './Components/producto/producto.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/RegistroProducto',pathMatch:'full'},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'home',component:LandingComponent},
   {path:'Login',component:LoginComponent},
   {path:'Menu',component:MenuComponent},

@@ -9,14 +9,14 @@
                 <hr>
                 <p>Bienvenido a Wilson!</p>
                 <div class="contenedor-item">
-                    <input type="input" class="caja-texto" placeholder="Correo" required="">
+                    <input type="input" class="caja-texto" placeholder="Correo" required="" id="Correo">
                     <label for="name" class="label">Correo</label>
                 </div>
                 <div class="contenedor-item">
-                    <input type="password" class="caja-texto" placeholder="Contraseña" required="">
+                    <input type="password" class="caja-texto" placeholder="Contraseña" required="" id="Contraseña">
                     <label for="name" class="label">Contraseña</label>
                 </div>
-                <button (click)="abrirArchivo()">Ingresar</button>
+                <button (click)="logear()">Ingresar</button>
                 
                 <p class="texto-recuperar-contrasenia">
                     <a href="#">¿Has olvidado tu contraseña?</a>
